@@ -1,0 +1,140 @@
+{
+  "_comment": "Configurazione servizi, sottoservizi e macro aree del C.S.I. Front Office. Importa con: POST /api/admin/import-services (dopo login Master 3FA). Nessun dato demo — solo struttura del dominio.",
+  "version": "1.0",
+  "macroAreas": [
+    {
+      "code": "01",
+      "name": "CAF Fiscale",
+      "short": "CAF",
+      "description": "Dichiarazioni 730, CU, ISEE, modello redditi, assistenza fiscale",
+      "color": "#001C3A",
+      "icon": "ReceiptText",
+      "services": [
+        { "code": "CAF01", "title": "Dichiarazione 730", "description": "Compilazione e invio 730 ordinario e integrativo" },
+        { "code": "CAF02", "title": "Certificazione Unica (CU)", "description": "Rilascio CU dipendenti e collaboratori" },
+        { "code": "CAF03", "title": "ISEE / ISEE Universitario", "description": "Calcolo e presentazione DSU per ISEE ordinario, universitario, minorenni" },
+        { "code": "CAF04", "title": "Modello Redditi (ex Unico)", "description": "Dichiarazione annuale dei redditi PF e agriturismo" },
+        { "code": "CAF05", "title": "Assistenza fiscale 730 precompilato", "description": "Acquisizione, controllo e invio 730 precompilato" }
+      ]
+    },
+    {
+      "code": "02",
+      "name": "Patronato",
+      "short": "PAT",
+      "description": "Pratiche INPS, pensioni, disabilità, prestazioni previdenziali",
+      "color": "#39546B",
+      "icon": "Handshake",
+      "services": [
+        { "code": "PAT01", "title": "Domanda pensione di vecchiaia", "description": "INPS: vecchiaia, anticipata, quota 100/102" },
+        { "code": "PAT02", "title": "Domanda pensione di invalidità", "description": "INPS: invalidità civile, blindosordomuti" },
+        { "code": "PAT03", "title": "Ricalcolo pensione", "description": "Ricalcolo quotta e contestazione rendita INPS" },
+        { "code": "PAT04", "title": "Disabilità e Legge 104", "description": "Domande accertamento handicap e accompagnamento" },
+        { "code": "PAT05", "title": "Prestazioni previdenziali ed assistenziali", "description": "APe social, isopensione, NASpI, disoccupazione agricola" }
+      ]
+    },
+    {
+      "code": "03",
+      "name": "Visure e Multiservizi",
+      "short": "VIS",
+      "description": "Visure camerali, catastali, protesti, autocertificazioni",
+      "color": "#5A7185",
+      "icon": "FileSearch",
+      "services": [
+        { "code": "STR07", "title": "Casellario e carichi pendenti", "description": "Estrazione casellario giudiziale e carichi pendenti" },
+        { "code": "STR08", "title": "Apostille su procura", "description": "Apostille (Convenzione dell'Aja) su procure e documenti" },
+        { "code": "STR09", "title": "Legalizzazione in Prefettura", "description": "Legalizzazione documenti esteri in Prefettura" },
+        { "code": "VIS01", "title": "Visura camerale", "description": "Ordinaria, storica, bilancio CCIAA" },
+        { "code": "VIS02", "title": "Visura catastale", "description": "Per soggetto, per immobile, planimetria" },
+        { "code": "VIS03", "title": "Visura protesti", "description": "Estrazione elenco protesti e pregiudizievoli" },
+        { "code": "VIS04", "title": "Autocertificazione", "description": "Redazione autocertificazioni sostitutive ex DPR 445/2000" }
+      ]
+    },
+    {
+      "code": "04",
+      "name": "Servizi per Stranieri",
+      "short": "STR",
+      "description": "Permessi di soggiorno, ricongiungimenti, cittadinanze, traduzioni",
+      "color": "#7B8DA0",
+      "icon": "Plane",
+      "services": [
+        { "code": "STR01", "title": "Cittadinanza (residenza/matrimonio)", "description": "Istanza cittadinanza per residenza o matrimonio" },
+        { "code": "STR02", "title": "Permesso di soggiorno", "description": "Rilascio/rinnovo permesso di soggiorno (sportello prefettura)" },
+        { "code": "STR03", "title": "Ricongiungimento familiare", "description": "Ricongiungimento familiare di parenti stranieri" },
+        { "code": "STR04", "title": "Traduzioni", "description": "Traduzioni asseverate e legalizzate" },
+        { "code": "STR05", "title": "Visti turistici", "description": "Assistenza visti turistici per familiari" },
+        { "code": "STR06", "title": "Esame B1 / A2 di italiano", "description": "Iscrizione e preparazione esami di lingua italiana" },
+        { "code": "STR10", "title": "Esame A2 di italiano", "description": "Iscrizione e preparazione esame A2 (permesso CE)" }
+      ]
+    },
+    {
+      "code": "05",
+      "name": "Lavoro Domestico",
+      "short": "LAV",
+      "description": "Assunzioni colf/badanti, Cesu, denuncia rapporti, cessazioni",
+      "color": "#99A7B3",
+      "icon": "Home",
+      "services": [
+        { "code": "LAV01", "title": "Assunzione colf/badante", "description": "Assunzione regolare lavoratore domestico" },
+        { "code": "LAV02", "title": "Cesu mensile/trimestrale", "description": "Comunicazione Cesu unificato per lavoratori domestici" },
+        { "code": "LAV03", "title": "Denuncia rapporto e variazioni", "description": "Denuncia inizio/modifica rapporto di lavoro" },
+        { "code": "LAV04", "title": "Cessazione rapporto", "description": "Comunicazione di cessazione del rapporto domestico" }
+      ]
+    },
+    {
+      "code": "06",
+      "name": "Identità Digitale e Ricalcolo Pensione",
+      "short": "IDP",
+      "description": "SPID/CIE, ricalcolo INPS, ex INPDAP, estratti contributivi",
+      "color": "#B8954A",
+      "icon": "ShieldCheck",
+      "services": [
+        { "code": "IDP01", "title": "Attivazione SPID", "description": "Rilascio SPID con identificazione in sede" },
+        { "code": "IDP02", "title": "Identità digitale CIE", "description": "Assistenza attivazione CIE per servizi PA" },
+        { "code": "IDP03", "title": "Ricalcolo INPS", "description": "Ricalcolo posizione assicurativa INPS" },
+        { "code": "IDP04", "title": "Estratto contributivo ex INPDAP", "description": "Estratto e ricostruzione contributi ex INPDAP/Gestione Dipendenti Pubblici" },
+        { "code": "IDP05", "title": "Estratto contributivo INPS", "description": "Estratto contributivo individuale annuale" }
+      ]
+    },
+    {
+      "code": "07",
+      "name": "Locazione Contratti",
+      "short": "LOC",
+      "description": "Registrazione contratti di locazione, RLI, cedolare secca",
+      "color": "#8E7440",
+      "icon": "KeyRound",
+      "services": [
+        { "code": "LOC01", "title": "Registrazione contratto locazione", "description": "Registrazione contratti 4+4, 3+2, transitori, studenti" },
+        { "code": "LOC02", "title": "Modello RLI", "description": "Comunicazione RLI per locazioni e variazioni" },
+        { "code": "LOC03", "title": "Cedolare secca", "description": "Opzione e regolarizzazione cedolare secca" }
+      ]
+    },
+    {
+      "code": "08",
+      "name": "Visure Catastali",
+      "short": "CAT",
+      "description": "Visure ipocatastali, planimetrie, voltura, intestazioni",
+      "color": "#6B5E3C",
+      "icon": "LandPlot",
+      "services": [
+        { "code": "CAT01", "title": "Visura ipocatastale per immobile", "description": "Visura ipocatastale terreni e fabbricati" },
+        { "code": "CAT02", "title": "Planimetria catastale", "description": "Richiesta planimetria catastale" },
+        { "code": "CAT03", "title": "Voltura catastale", "description": "Voltura per successione, compravendita, donazione" },
+        { "code": "CAT04", "title": "Intestazione catastale", "description": "Estrazione intestazione per soggetto" }
+      ]
+    },
+    {
+      "code": "09",
+      "name": "Finanza Agevolata",
+      "short": "FIN",
+      "description": "Bandi regionali, mutui prima casa, incentivi PMI, bonus",
+      "color": "#4A4231",
+      "icon": "PiggyBank",
+      "services": [
+        { "code": "FIN01", "title": "Bandi regionali", "description": "Bandi regionali per startup, PMI, donne e giovani" },
+        { "code": "FIN02", "title": "Mutuo prima casa", "description": "Assistenza pratiche mutuo prima casa (PLAID, convenzioni)" },
+        { "code": "FIN03", "title": "Incentivi PMI", "description": "Incentivi fiscali e contributivi PMI (Nuove Imprese a Tasso Zero)" },
+        { "code": "FIN04", "title": "Bonus edilizi e superbonus", "description": "Istruttoria bonus edilizi (superbonus, ecobonus, facciate)" }
+      ]
+    }
+  ]
+}

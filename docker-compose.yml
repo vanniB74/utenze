@@ -1,0 +1,32 @@
+# docker-compose per sviluppo locale con DB persistente e SMTP mock.
+# Uso: docker compose up -d
+# Logs: docker compose logs -f csi-crm
+# Stop: docker compose down
+# Stop + dati: docker compose down -v
+
+services:
+  csi-crm:
+    build: .
+    container_name: csi-crm-rigenerato
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - csi-data:/data
+      - ./config:/app/config:ro
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - DATABASE_URL=file:/data/crm.sqlite
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  csi-data:
+    driver: local

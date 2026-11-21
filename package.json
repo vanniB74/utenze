@@ -1,0 +1,36 @@
+{
+  "name": "csi-crm-rigenerato",
+  "version": "1.0.0",
+  "description": "C.S.I. Front Office — CRM centrale rigenerato (file unico Node.js, zero dipendenze esterne)",
+  "main": "crm.js",
+  "bin": {
+    "csi-crm": "crm.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node crm.js",
+    "dev": "node crm.js",
+    "seed": "CSI_TEST_SEED=1 node scripts/seed.js",
+    "purge-test-data": "node scripts/purge-test-data.js",
+    "smoke": "node scripts/smoke-test.js"
+  },
+  "files": [
+    "crm.js",
+    "config/services.json",
+    "scripts/seed.js",
+    "scripts/purge-test-data.js",
+    "scripts/smoke-test.js"
+  ],
+  "keywords": [
+    "csi",
+    "crm",
+    "front-office",
+    "patronato",
+    "caf",
+    "qr-operator"
+  ],
+  "license": "UNLICENSED",
+  "private": true
+}

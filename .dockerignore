@@ -1,0 +1,28 @@
+# Build artifacts
+node_modules
+npm-debug.log
+*.log
+.git
+.gitignore
+.vercel
+.dockerignore
+Dockerfile
+docker-compose.yml
+*.md
+!README-deploy.md
+docs/
+
+# Test DB (NON committarlo nell'immagine)
+*.sqlite
+*.sqlite-journal
+*.db
+/data/
+crm.sqlite
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

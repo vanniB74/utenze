@@ -1,0 +1,39 @@
+# Dipendenze (generate da `npm install` — qui sempre vuote)
+node_modules/
+
+# DB locale (NON committarlo)
+*.sqlite
+*.sqlite-journal
+*.db
+/data/
+crm.sqlite
+
+# Env reale (NON committarlo)
+.env
+.env.local
+.env.production
+
+# Vercel (se applicabile)
+.vercel/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Build / cache
+.cache/
+dist/
+build/
+
+# Fly.io locale
+fly.toml
