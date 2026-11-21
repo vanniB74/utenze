@@ -11,6 +11,39 @@ Per deployarlo serve una piattaforma che supporti:
 - Filesystem persistente (per il DB SQLite)
 - Porta TCP esposta
 
+## Stato del deploy (2026-11-21)
+
+- **Codice**: pushato su `https://github.com/vanniB74/utenze` branch `csi-crm-rigenerato` (18 file, no segreti committati).
+- **Tunnel attivo**: `https://transparency-scholarships-world-webpage.trycloudflare.com` (trycloudflare, **temporaneo** — scade a riavvio).
+- **Credenziali** (per il primo setup post-deploy): vedi `DEPLOY-STATUS.md` sezione "Credenziali".
+
+## Avvio rapido sul tuo PC Windows (tunnel Cloudflare)
+
+Setup più semplice per il tuo caso: il server gira sul tuo PC, Cloudflare tunnel lo espone pubblicamente.
+
+```powershell
+# 1. Installa Node.js 22+ da https://nodejs.org/dist/v22.20.0/node-v22.20.0-x64.msi
+# 2. Clona il branch col codice
+git clone -b csi-crm-rigenerato https://github.com/vanniB74/utenze.git csi-crm
+cd csi-crm
+
+# 3. (Opzionale) Installa cloudflared per tunnel stabile:
+winget install --id Cloudflare.cloudflared
+
+# 4. Avvia server + tunnel (URL trycloudflare già configurato):
+.\deploy\windows-cloudflare.ps1
+```
+
+Lo script PowerShell:
+- Verifica Node ≥ 22.5
+- Crea `.env` dal template e genera `CSI_BACKUP_KEY` casuale
+- Avvia `node crm.js` su `http://localhost:3000`
+- Avvia `cloudflared tunnel --url http://localhost:3000` → esponi pubblicamente
+
+URL pubblico dopo l'avvio: `https://transparency-scholarships-world-webpage.trycloudflare.com`
+
+**Importante**: l'URL trycloudflare è temporaneo. Per uno stabile usa `-PersistentTunnel` (richiede `cloudflared tunnel login` + named tunnel).
+
 ## Requisiti
 
 - Node.js ≥ 22.5.0 (per `node:sqlite`; raccomandato 22 LTS o 24)
